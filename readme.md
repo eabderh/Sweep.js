@@ -4,9 +4,9 @@
 Sweep.js is a quick utility for allowing sideways swiping when viewing a
 website on a mobile device.
 
-Please check out the video - _sweep.webm_ - in the repository. It shows a quick
-demo of Sweep.js in action on a smartphone. To try out Seep.js directly, just
-view my website, [bytekite.io](https://www.bytekite.io), on a smartphone.
+Please check out the video - **sweep.webm** - in the repository. It shows a
+quick demo of Sweep.js in action on a smartphone. To try out Seep.js directly,
+just view my website, [bytekite.io](https://www.bytekite.io), on a smartphone.
 
 ### Description
 
@@ -48,7 +48,7 @@ the way I move around static/fixed elements so I've had to hack a bit to make
 it work. However, the utility itself seems to be very stable with no issues.
 
 
-### Credit
+### Shout-out
 
 This project was mainly inspired by jakestfu's
 [Snap.js](https://github.com/jakiestfu/Snap.js/) along with many others.
