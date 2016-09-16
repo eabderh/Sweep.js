@@ -5,7 +5,9 @@ Sweep.js is a quick utility for allowing sideways swiping when viewing a
 website on a mobile device.
 
 Please check out the video - *sweep.webm* - in the repository. It shows a quick
-demo of Sweep.js in action on my website ([*bytekite.io*](https://www.bytekite.io)).
+demo of Sweep.js in action on a smartphone. To try out Seep.js just view my
+website,
+([bytekite.io](https://www.bytekite.io)), on a smartphone.
 
 ### Description
 
@@ -20,11 +22,11 @@ website layout is shifted in accordance to the users motion. Once the user
 discontinues the motion, the website layout is adjusted to the desired sideways
 position depending on how far the user has moved the website layout sideways.
 
-As a note, the website moves sideways by the adjusting of the css "left" pixel
-amount on any element. I personally use it to move a container element with a
-static navigation element and a element with content back and forth across the
-viewport. The user can then choose between seeing the navigation panel and the
-content with a single swipe.
+As a note, the website moves sideways by the adjustment of the css "left" pixel
+value on the main element. I personally use it to move a container element with
+a static navigation element and a element with content back and forth across
+the viewport. The user can then choose between seeing the navigation panel and
+the content with a single swipe.
 
 ### Advantages
 
@@ -38,6 +40,14 @@ bars, lists, etc. The sideways motion is especially intuitive for smartphone
 users and keeps the small screen free of any blocking navigation buttons. As
 shown in the demo, I personally still keep the "burger" navigation button
 simply because new users are more adverse to a blank screen.
+
+### Bugs
+
+I haven't had much of an issue with the utility itself but there are some bugs
+with the setup I used on my website. Some phones, such as apple, do not like
+the way I move around static/fixed elements so I've had to hack a bit to make
+it work. However, the utility itself seems to be very stable with no issues.
+
 
 ### Credit
 
