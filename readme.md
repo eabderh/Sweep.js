@@ -32,7 +32,7 @@ While the user moves the sliding element the css "left" pixel value is
 adjusted. As soon as the user lets go, a certain element class is set on the
 sliding element and this activates certain css style rules, such as moving the
 sliding element 100vw to the left or right. More info can be found under
-**Usage**.
+**Sample Usage**.
 
 ### Advantages
 
@@ -47,14 +47,16 @@ users and keeps the small screen free of any blocking navigation buttons. As
 shown in the demo, I personally still keep the "burger" navigation button
 simply because new users are more adverse to a blank screen.
 
-### Usage
+### Sample Usage
 
 #####Javascript usage:
+
+Further explanation in the source.
 ```javascript
 var sweep = new Sweep({
-  elementID:      'platform',
+  elementID:      'platform', // ID of element that does the sliding
   classNameBase:  'sweep',
-  classNames:     ['sweep_fixedpane', 'sweep_contentpane'],
+  classNames:     ['sweep_fixedpane', 'sweep_contentpane'], // names of CSS rules shown below
   startIndex:     0,
   count:          2,
   angle:          20,
@@ -65,16 +67,18 @@ var sweep = new Sweep({
 #####Accompanying CSS usage:
 
 The *platform* element contains both a *fixedpane* element and a *contentpane*
-element
+element that are next to each other and each 100vw in width.
 
-Show the *fixedpane* element (navigation)
+Show the *fixedpane* element (navigation).
 ```css
 #platform.sweep_fixedpane {
   left: 0;
 }
 ```
 
-Show the *contentpane* element (content) by shifting a full screens width
+
+Show the *contentpane* element (content) by shifting the *platform* element a
+full screens width left.
 ```css
 #platform.sweep_contentpane {
   left: -100vw;
