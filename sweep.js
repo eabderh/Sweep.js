@@ -147,9 +147,9 @@ function Sweep(config) {
 		start: function (event) {
 			var xy = pointer.eventProc(event);
 			state.moveVector.init(xy);
-			state.dragAction 		= true;
-			state.slideAction 		= false;
-			state.slideStart 		= false;
+			state.dragAction 	= true;
+			state.slideAction 	= false;
+			state.slideStart 	= false;
 		},
 		move: function (event) {
 			if (state.dragAction) {
@@ -211,7 +211,7 @@ function Sweep(config) {
 
 	this.enable = function () {
 		slideElement.addEventListener(
-				pointer.events.start, callback.start, false
+			pointer.events.start, callback.start, false
 		);
 		slideElement.addEventListener(
 			pointer.events.move, callback.move, false
@@ -222,7 +222,7 @@ function Sweep(config) {
 	}
 	this.disable = function () {
 		slideElement.removeEventListener(
-				pointer.events.start, callback.start, false
+			pointer.events.start, callback.start, false
 		);
 		slideElement.removeEventListener(
 			pointer.events.move, callback.move, false
