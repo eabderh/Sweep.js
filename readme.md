@@ -22,11 +22,17 @@ website layout is shifted in accordance to the users motion. Once the user
 discontinues the motion, the website layout is adjusted to the desired sideways
 position depending on how far the user has moved the website layout sideways.
 
-As a note, the website moves sideways by the adjustment of the css "left" pixel
-value on the main element. I personally use it to move a container element with
-a static navigation element and a element with content back and forth across
-the viewport. The user can then choose between seeing the navigation panel and
-the content with a single swipe.
+As a note, the website moves sideways by the adjustment of the css "left" value
+(both in *px* and *vw* values) on the main sliding element. I personally use it
+to move a container sliding element with a static navigation element and a
+element with content back and forth across the viewport. The user can then
+choose between seeing the navigation panel and the content with a single swipe.
+
+While the user moves the sliding element the css "left" pixel value is
+adjusted. As soon as the user lets go, a certain element class is set on the
+sliding element and this activates certain css style rules, such as moving the
+sliding element 100vw to the left or right. More info can be found under
+**Usage**.
 
 ### Advantages
 
@@ -40,6 +46,40 @@ bars, lists, etc. The sideways motion is especially intuitive for smartphone
 users and keeps the small screen free of any blocking navigation buttons. As
 shown in the demo, I personally still keep the "burger" navigation button
 simply because new users are more adverse to a blank screen.
+
+### Usage
+
+#####Javascript usage:
+```javascript
+var sweep = new Sweep({
+  elementID:      'platform',
+  classNameBase:  'sweep',
+  classNames:     ['sweep_fixedpane', 'sweep_contentpane'],
+  startIndex:     0,
+  count:          2,
+  angle:          20,
+  dragLength:     20
+});
+```
+
+#####Accompanying CSS usage:
+
+The *platform* element contains both a *fixedpane* element and a *contentpane*
+element
+
+Show the *fixedpane* element (navigation)
+```css
+#platform.sweep_fixedpane {
+  left: 0;
+}
+```
+
+Show the *contentpane* element (content) by shifting a full screens width
+```css
+#platform.sweep_contentpane {
+  left: -100vw;
+}
+```
 
 ### Bugs
 
